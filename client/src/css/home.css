@@ -1,0 +1,16 @@
+h1 {
+    color: saddlebrown;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+button {
+    align-items: center;
+    font-size: 20px;
+    background-color: violet;
+    height: fit-content;
+    width: fit-content;
+    border-color: darkblue;
+    border-radius: 10px;
+}
