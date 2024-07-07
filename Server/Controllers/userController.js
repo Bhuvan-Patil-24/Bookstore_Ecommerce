@@ -1,6 +1,7 @@
-import User from "../models/User.js";
+import User from "../Models/user.js";
+import Book from "../Models/books.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 
 // Get all users
 export const getAllUsers = async (req, res, next) => {
@@ -181,32 +182,35 @@ export const getUserAddresses = async (req, res, next) => {
     }
 };
 
-// Add product to cart
-export const addProductToCart = async (req, res, next) => {
+
+export const addBookToCart = async (req, res, next) => {
     try {
-        const { userId } = req.params;
-        const { productId, quantity } = req.body;
+        const userId = req.params.userId;
+        const bookId = req.body.bookId;
 
         const user = await User.findById(userId);
 
         if (!user) {
-            return res.status(404).json({ message: "User not found" });
+            return res.status(404).json({ error: "User not found" });
         }
 
-        const cartItem = { product: productId, quantity };
+        const cartItem = {
+            product: bookId,
+            quantity: req.body.quantity || 1,
+        };
+
         user.shoppingCart.push(cartItem);
         await user.save();
 
-        res.status(201).json({ message: "Product added to cart" });
+        res.status(201).json({ message: "Book added to cart" });
     } catch (error) {
-        res.status(500).json({ message: "Unable to add product to cart" });
+        res.status(500).json({ error: "Unable to add book to cart" });
     }
 };
 
-// Get products from cart
-export const getProductsFromCart = async (req, res) => {
+export const getCart = async (req, res) => {
     try {
-        const { userId } = req.params;
+        const userId = req.params.userId;
 
         const user = await User.findById(userId).populate({
             path: 'shoppingCart.product',
@@ -214,37 +218,66 @@ export const getProductsFromCart = async (req, res) => {
         });
 
         if (!user) {
-            return res.status(404).json({ message: "User not found" });
+            return res.status(404).json({ error: "User not found" });
         }
 
-        res.status(200).json({ shoppingCart: user.shoppingCart });
+        const shoppingCart = user.shoppingCart;
+
+        res.status(200).json({ shoppingCart });
     } catch (error) {
-        res.status(500).json({ message: "Unable to retrieve shopping cart" });
+        res.status(500).json({ error: "Unable to retrieve shopping cart" });
     }
 };
 
-// Delete product from cart
-export const deleteProductFromCart = async (req, res) => {
+export const deleteBookFromCart = async (req, res) => {
     try {
-        const { userId, productId } = req.params;
+        const userId = req.params.userId;
+        const bookId = req.params.bookId;
 
         const user = await User.findById(userId);
 
         if (!user) {
-            return res.status(404).json({ message: "User not found" });
+            return res.status(404).json({ error: "User not found" });
         }
 
-        const itemIndex = user.shoppingCart.findIndex(item => item.product.toString() === productId);
+        const itemIndex = user.shoppingCart.findIndex(item => item.product.toString() === bookId);
 
         if (itemIndex === -1) {
-            return res.status(404).json({ message: "Product not found in the cart" });
+            return res.status(404).json({ error: "Book not found in the cart" });
         }
 
         user.shoppingCart.splice(itemIndex, 1);
+
         await user.save();
 
-        res.json({ message: "Product removed from cart" });
+        res.json({ message: "Book removed from cart" });
     } catch (error) {
-        res.status(500).json({ message: "Unable to remove product from cart" });
+        res.status(500).json({ error: "Unable to remove book from cart" });
+    }
+};
+
+export const addReviewToBook = async (req, res, next) => {
+    try {
+        const userId = req.params.userId;
+        const reviewText = req.body.reviewText;
+        const bookId = req.params.bookId;
+
+        const book = await Book.findById(bookId);
+
+        if (!book) {
+            return res.status(404).json({ error: 'Book not found' });
+        }
+
+        book.reviews.push({
+            user: userId,
+            text: reviewText,
+            rating: req.body.rating || 5,
+        });
+
+        await book.save();
+
+        res.status(201).json({ message: 'Review added successfully' });
+    } catch (error) {
+        res.status(500).json({ error: 'Unable to add review to book' });
     }
 };

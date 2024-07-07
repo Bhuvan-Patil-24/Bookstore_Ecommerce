@@ -1,6 +1,5 @@
-import Book from "../models/Book.js";
+import Book from "../Models/books.js";
 
-// Get all books
 export const getAllBooks = async (req, res, next) => {
     try {
         const books = await Book.find();
@@ -10,7 +9,6 @@ export const getAllBooks = async (req, res, next) => {
     }
 };
 
-// Get book by ID
 export const getBookById = async (req, res, next) => {
     try {
         const bookId = req.params.bookId;
@@ -26,7 +24,6 @@ export const getBookById = async (req, res, next) => {
     }
 };
 
-// Add a new book
 export const addBook = async (req, res, next) => {
     try {
         const newBook = new Book(req.body);
@@ -35,4 +32,32 @@ export const addBook = async (req, res, next) => {
     } catch (error) {
         res.status(500).json({ error: "Unable to add book" });
     }
-}
+};
+
+export const updateBook = async (req, res, next) => {
+    try {
+        const updatedBook = await Book.findByIdAndUpdate(
+            req.params.bookId,
+            req.body,
+            { new: true }
+        );
+        if (!updatedBook) {
+            return res.status(404).json({ error: "Book not found" });
+        }
+        res.json(updatedBook);
+    } catch (error) {
+        res.status(500).json({ error: "Unable to update book" });
+    }
+};
+
+export const deleteBook = async (req, res, next) => {
+    try {
+        const deletedBook = await Book.findByIdAndRemove(req.params.bookId);
+        if (!deletedBook) {
+            return res.status(404).json({ error: "Book not found" });
+        }
+        res.json({ message: "Book deleted" });
+    } catch (error) {
+        res.status(500).json({ error: "Unable to delete book" });
+    }
+};
