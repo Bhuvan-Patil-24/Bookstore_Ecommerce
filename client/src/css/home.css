@@ -42,3 +42,17 @@ button {
     color: black;
   }
   
+  .carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+  }
+  
+  .my-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+  }
+  

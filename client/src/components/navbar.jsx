@@ -1,19 +1,18 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Container, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
-
 
 const NavigationBar = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Home</Navbar.Brand>
+        <Navbar.Brand href="#home">Bookish Bliss</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <LinkContainer to="/">
-              <Nav.Link>Books</Nav.Link>
+              <Nav.Link>Home</Nav.Link>
             </LinkContainer>
             <NavDropdown title="Books" id="basic-nav-dropdown">
               <LinkContainer to="/books/fiction">
@@ -34,10 +33,9 @@ const NavigationBar = () => {
               <LinkContainer to="/books/poetry">
                 <NavDropdown.Item>Poetry</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to="/books/competative exam">
-                <NavDropdown.Item>competative Exams</NavDropdown.Item>
+              <LinkContainer to="/books/competitive-exam">
+                <NavDropdown.Item>Competitive Exams</NavDropdown.Item>
               </LinkContainer>
-              <NavDropdown.Divider />           
             </NavDropdown>
             <LinkContainer to="/about">
               <Nav.Link>About</Nav.Link>

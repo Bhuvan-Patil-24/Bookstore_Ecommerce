@@ -6,7 +6,7 @@ import {
   updateProfileImage,
   resetPassword
 } from "../Controllers/userController.js";
-import { isAuthenticated, isAdmin } from "../Middlewares/authMiddleware.js";
+import { isAuthenticated } from "../Middlewares/authMiddleware.js";
 
 const router = express.Router();
 

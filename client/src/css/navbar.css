@@ -1,42 +1,31 @@
 .navbar {
-    background-color: black;
-    color: #fff;
-    padding: 12px;
+  background-color: #343a40;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-link {
+  margin-right: 10px;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  color: #007bff !important;
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: #343a40;
   }
-  
-  .navbar h1 {
-    margin: 0;
-  }
-  
-  .navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navbar ul li {
-    display: inline;
-    margin-left: 10px;
-  }
-  
-  .navbar ul li:first-child {
-    margin-left: 0;
-  }
-  
-  .navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .navbar ul li a:hover {
-    text-decoration: underline;
-  }
-  body {
-    background-color: #f8f9fa;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+}

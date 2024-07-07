@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import './about.css';
+import '../css/about.css';
 
 const AboutPage = () => {
   return (
@@ -9,7 +9,7 @@ const AboutPage = () => {
         <h1 className="text-center mb-4">About Us</h1>
         <Row className="align-items-center">
           <Col md={6} className="mb-4">
-            <Image src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F749427194235560254%2F&psig=AOvVaw2tCtTerWv6zBF4lPEfZ6jn&ust=1720428182534000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCICs9MfElIcDFQAAAAAdAAAAABAh" rounded fluid />
+            <Image src="https://example.com/about-us-image.jpg" rounded fluid />
           </Col>
           <Col md={6}>
             <p>

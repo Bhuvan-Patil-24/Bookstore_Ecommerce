@@ -1,9 +1,20 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import './.css';
+import axios from 'axios';
+import '../css/footer.css';
 
 const Footer = () => {
+  // Function to send a sample request to the backend
+  const sendRequest = async () => {
+    try {
+      const response = await axios.get('http://localhost:5500/sample'); // Replace with your actual backend endpoint
+      console.log('Backend Response:', response.data); // Logging the response data
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
   return (
     <footer className="footer bg-dark text-white">
       <Container>
@@ -35,7 +46,8 @@ const Footer = () => {
           </Col>
           <Col md={6} className="text-md-right footer-right">
             <h5>bookishblish</h5>
-            <p>&copy; 2023 Bookish Bliss. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Bookish Bliss. All rights reserved.</p>
+            <button onClick={sendRequest}>Send Request to Backend</button> {/* Example button to trigger backend request */}
           </Col>
         </Row>
       </Container>
@@ -44,3 +56,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
