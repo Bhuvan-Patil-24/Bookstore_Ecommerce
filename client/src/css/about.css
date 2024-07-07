@@ -1,0 +1,16 @@
+.about-page {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .about-page h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .about-page p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  

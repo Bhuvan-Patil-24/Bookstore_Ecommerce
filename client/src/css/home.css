@@ -14,3 +14,31 @@ button {
     border-color: darkblue;
     border-radius: 10px;
 }
+.home-page {
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dlight%2Bpink%2Bsolid&psig=AOvVaw0El2CgUj4BAE4E8cGyexdv&ust=1720425074474000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKioqv64lIcDFQAAAAAdAAAAABAE');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 0;
+    color: white;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .card-title, .card-text {
+    color: black;
+  }
+  
