@@ -1,30 +1,31 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import HomePage from './components/home.jsx';
-import BooksPage from './components/book.jsx';
-import ContactPage from './components/contact.jsx';
-import LoginPage from './components/login.jsx';
-import AboutPage from './components/about.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/home.jsx';
+import BooksPage from './pages/book.jsx';
+import ContactPage from './pages/contact.jsx';
+import LoginPage from './pages/login.jsx';
+import AboutPage from './pages/about.jsx';
 import NavigationBar from './components/navbar.jsx';
 import Footer from './components/footer.jsx';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const App = () => {
     return (
-        <Router>
             <div className="d-flex flex-column min-vh-100">
                 <NavigationBar />
-                <Switch>
-                    <Route path="/" exact component={HomePage} />
-                    <Route path="/books" component={BooksPage} />
-                    <Route path="/about" component={AboutPage} />
-                    <Route path="/contact" component={ContactPage} />
-                    <Route path="/login" component={LoginPage} />
-                </Switch>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/books" element={<BooksPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/login" element={<LoginPage />} />
+                </Routes>
                 <Footer />
+                <ToastContainer />
             </div>
-        </Router>
     );
 };
 
