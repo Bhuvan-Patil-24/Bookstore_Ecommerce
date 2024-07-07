@@ -63,4 +63,4 @@ const userSchema = new Schema({
     addresses: [userAddressSchema],
 });
 
-export default mongoose.model("EcommerceUser", userSchema);
+export default mongoose.model("User", userSchema);

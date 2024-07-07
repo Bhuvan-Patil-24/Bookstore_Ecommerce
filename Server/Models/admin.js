@@ -1,13 +1,15 @@
 import mongoose from "mongoose";
+import bcrypt from "bcrypt";
 
 const Schema = mongoose.Schema;
 
 const adminSchema = new Schema({
-  adminName: {
+  name: {
     type: String,
     required: true,
+    unique: true,
   },
-  adminPassword: {
+  password: {
     type: String,
     required: true,
   },
