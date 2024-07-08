@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/home.jsx';
-import BooksPage from './pages/books.jsx';
+import BooksPage from './pages/book.jsx';
 import ContactPage from './pages/contact.jsx';
 import LoginPage from './pages/login.jsx';
 import AboutPage from './pages/about.jsx';
 import NavigationBar from './components/navbar.jsx';
 import Header from './components/header.jsx';
 import Footer from './components/footer.jsx';
-import AdminLoginPage from './pages/adminLogin.jsx';
-import SignupPage from "./pages/signup.jsx";
+import AdminLoginPage from './pages/admin.jsx';
+import SignupPage from "./pages/usersignup.jsx";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';

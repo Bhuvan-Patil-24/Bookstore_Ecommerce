@@ -1,29 +1,33 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Form, Button } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import '../Css/SignUp.css';
+import '../css/usersignup.css';
 
 const SignupPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-
+  const navigate = useNavigate();
+  
   const handleSignup = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      toast.error("Passwords do not match!");
+      toast.error("Passwords do not match");
       return;
     }
+
     axios.post('http://localhost:5500/api/user/signup', { name, email, password })
       .then(response => {
         console.log('Signup successful:', response.data);
         toast.success("Signup successful");
+        navigate("/login");
       })
       .catch(error => {
         console.error('Error signing up:', error);
-        toast.error("Error signing up!");
+        toast.error("Error signing up");
       });
   };
 
@@ -35,7 +39,7 @@ const SignupPage = () => {
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter name"
+            placeholder="Enter your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -75,6 +79,9 @@ const SignupPage = () => {
           Sign Up
         </Button>
       </Form>
+      <div className="options mt-4">
+        <Link to="/login" className="option-link">Already have an account? Login</Link>
+      </div>
     </Container>
   );
 };

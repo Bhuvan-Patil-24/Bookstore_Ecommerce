@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-
+import "../css/book.css"
 const BooksPage = () => {
   const payment = () => {
     window.location.href = 'https://rzp.io/i/A5I10xmb';
