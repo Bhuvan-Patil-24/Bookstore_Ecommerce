@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import axios from 'axios';
-import '../css/footer.css';
+import '../Css/Footer.css';
 
 const Footer = () => {
   // Function to send a sample request to the backend

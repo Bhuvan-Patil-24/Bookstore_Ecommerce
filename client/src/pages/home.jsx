@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Carousel, Container, Row, Col, Card } from 'react-bootstrap';
-import '../css/home.css';
+import '../Css/Home.css';
 
 const HomePage = () => {
     const [books, setBooks] = useState([]);

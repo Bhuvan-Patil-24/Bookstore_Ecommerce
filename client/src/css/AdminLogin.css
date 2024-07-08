@@ -1,0 +1,17 @@
+.admin-login-page {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .option-link {
+    display: block;
+    margin-top: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .option-link:hover {
+    text-decoration: underline;
+  }
+  

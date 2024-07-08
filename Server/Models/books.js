@@ -44,9 +44,9 @@ const bookSchema = new Schema({
     type: String,
     required: true,
   },
-  bookImage: {
-    type: String,
-  },
+  // bookImage: {
+  //   type: String,
+  // },
   price: {
     type: Number,
     required: true,

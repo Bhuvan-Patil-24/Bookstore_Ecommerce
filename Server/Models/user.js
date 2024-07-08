@@ -55,10 +55,10 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
-    profileImg: {
-        type: String,
-        required: false,
-    },
+    // profileImg: {
+    //     type: String,
+    //     required: false,
+    // },
     shoppingCart: [cartItemSchema],
     addresses: [userAddressSchema],
 });

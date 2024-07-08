@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import '../css/contact.css';
+import '../Css/Contact.css';
 
 const ContactPage = () => {
     return (
