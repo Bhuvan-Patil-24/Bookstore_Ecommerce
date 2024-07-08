@@ -11,7 +11,7 @@ const ContactPage = () => {
                     <Col md={6}>
                         <h2>Contact Us</h2>
                         <ul className="list-unstyled">
-                            <li><FaPhone /> 7687545343</li>
+                            <li> 7687545343</li>
                             <li><FaEnvelope /> bookishblish@gmail.com</li>
                         </ul>
                     </Col>

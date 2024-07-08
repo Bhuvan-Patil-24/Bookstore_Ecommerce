@@ -1,28 +1,20 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import '../css/about.css';
+import { Container } from 'react-bootstrap';
 
-const AboutPage = () => {
+
+const CenteredImageWithText = () => {
   return (
-    <div className="about-page">
-      <Container>
-        <h1 className="text-center mb-4">About Us</h1>
-        <Row className="align-items-center">
-          <Col md={6} className="mb-4">
-            <Image src="https://example.com/about-us-image.jpg" rounded fluid />
-          </Col>
-          <Col md={6}>
-            <p>
-              Welcome to our bookstore! Established in 2024, we have grown from a small local shop to an international online platform. Our mission is to provide a vast collection of books to readers all around the world, ensuring that everyone has access to the literature they love. We pride ourselves on our wide selection of books and excellent customer service.
-            </p>
-            <p>
-              Our vision is to create a world where books are easily accessible to everyone, fostering a love for reading and lifelong learning. Join us in our journey and explore our diverse range of books, from bestsellers to hidden gems.
-            </p>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Container className="container">
+      
+      
+      <p>
+        Welcome to Bookish Bliss! Founded in 2024, we've evolved from a humble local bookstore into a global online destination for book lovers. Our mission is to provide an extensive range of books, catering to diverse tastes and interests worldwide. With a commitment to exceptional service, we ensure every reader finds literary treasures that inspire and entertain.
+      </p>
+      <p>
+        Whether you're seeking bestsellers, literary classics, or niche genres, our curated collection awaits. Embrace the joy of reading with us as we continue to foster a community passionate about literature, learning, and discovery. Join our journey and explore boundless worlds through the magic of books.
+      </p>
+    </Container>
   );
 };
 
-export default AboutPage;
+export default CenteredImageWithText;

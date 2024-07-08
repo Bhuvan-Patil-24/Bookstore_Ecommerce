@@ -1,11 +1,11 @@
 /* header.css */
 
 .home-header {
-    background-image: url('https://getwallpapers.com/wallpaper/full/e/7/a/135960.jpg'); /* Replace with your image path */
+    background-image: url('https://utulsa.edu/wp-content/uploads/2024/01/geometric-design-base-1200x460-1-1200x455.jpg'); /* Replace with your image path */
     background-size: cover; /* Cover the entire header */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the background image */
-    color: #ffffff; /* White text color */
+    color: black; /* White text color */
     text-align: center; /* Center-align the text */
     padding: 25px 0; /* Add padding */
 }
