@@ -5,7 +5,7 @@ import { isAuthenticated, isAuthorized } from "../Middlewares/authMiddleware.js"
 
 const router = express.Router();
 
-router.get('/', getAllBooks);
+router.get('/allBooks', getAllBooks);
 router.get('/bookById', getBookById);
 router.post('/addBookToCart/:userId', isAuthenticated, isAuthorized, addBookToCart);
 router.get('/cart/:userId', isAuthenticated, isAuthorized, getCart);

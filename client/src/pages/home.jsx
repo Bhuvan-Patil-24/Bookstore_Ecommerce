@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Carousel, Container, Row, Col, Card } from 'react-bootstrap';
-import '../Css/Home.css';
+import '../css/home.css';
 
 const HomePage = () => {
     const [books, setBooks] = useState([]);
@@ -13,21 +13,20 @@ const HomePage = () => {
                 setBooks(response.data);
             })
             .catch(error => console.error('Error fetching books:', error));
-
         // Mock data for the carousel
         setCarouselItems([
             {
-                src: 'https://assets.penguinrandomhouse.com/wp-content/uploads/2018/03/08090727/1200x628_-Backlist_Poetry.jpg',
+                src: 'https://hips.hearstapps.com/hmg-prod/images/poetry-books-1617290191.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*',
                 caption: 'Poetry Books',
                 description: 'Collections of love, death, grief, and oppression'
             },
             {
-                src: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Favnishanand-49235.medium.com%2Fwhy-do-i-love-sports-so-much-63c37b519cb5&psig=AOvVaw11Mld2e_N-9lPyuOdLuhbA&ust=1720424123075000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJj54rm1lIcDFQAAAAAdAAAAABAJ',
+                src: 'https://ca-times.brightspotcdn.com/dims4/default/2df84ee/2147483647/strip/true/crop/890x615+0+0/resize/1200x829!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Ffc%2F3e%2F3f21d11d4144af212743f1ff16dd%2Fbooks.jpg',
                 caption: 'Sport Books',
                 description: 'There is no more exciting sport than flying, for if you lose, you die.'
             },
             {
-                src: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Ftime.com%2F6341840%2Fbest-fiction-books-2023%2F&psig=AOvVaw0junjLDewlajIpdk_2GZSr&ust=1720424234800000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCND-t_O1lIcDFQAAAAAdAAAAABAE',
+                src: 'https://i0.wp.com/thenerddaily.com/wp-content/uploads/2020/12/2021-Anticipated-Fantasy-and-Sci-Fi-Book-Releases.jpg?w=1000&ssl=1',
                 caption: 'Fiction Books',
                 description: 'Fiction is the truth inside the lie.'
             }
@@ -36,6 +35,8 @@ const HomePage = () => {
 
     return (
         <div className="home-page">
+            
+            
             <Carousel>
                 {carouselItems.map((item, index) => (
                     <Carousel.Item key={index}>
@@ -52,7 +53,7 @@ const HomePage = () => {
                 ))}
             </Carousel>
             <Container>
-                <h2 className="my-4">Featured Books</h2>
+               
                 <Row>
                     {books.map((book, index) => (
                         <Col md={4} key={index} className="mb-4">

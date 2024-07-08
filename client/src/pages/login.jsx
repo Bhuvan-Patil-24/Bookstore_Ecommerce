@@ -54,7 +54,7 @@ const LoginPage = () => {
       </Form>
       <div className="options mt-4">
         <Link to="/reset-password" className="option-link">Forgot Password?</Link>
-        <Link to="/admin-login" className="option-link">Login as Admin</Link>
+        <Link to="/admin" className="option-link">Login as Admin</Link>
         <Link to="/signup" className="option-link">Sign Up</Link>
       </div>
     </Container>

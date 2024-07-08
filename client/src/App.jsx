@@ -1,12 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './Pages/Home.jsx';
-import BooksPage from './Pages/Books.jsx';
-import ContactPage from './Pages/Contact.jsx';
-import LoginPage from './Pages/UserLogin.jsx';
-import AboutPage from './Pages/About.jsx';
-import NavigationBar from './Components/Navbar.jsx';
-import Footer from './Components/Footer.jsx';
+import HomePage from './pages/home.jsx';
+import BooksPage from './pages/books.jsx';
+import ContactPage from './pages/contact.jsx';
+import LoginPage from './pages/login.jsx';
+import AboutPage from './pages/about.jsx';
+import NavigationBar from './components/navbar.jsx';
+import Header from './components/header.jsx';
+import Footer from './components/footer.jsx';
+import AdminLoginPage from './pages/adminLogin.jsx';
+import SignupPage from "./pages/signup.jsx";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,6 +18,7 @@ import './App.css';
 const App = () => {
     return (
             <div className="d-flex flex-column min-vh-100">
+                <Header/>
                 <NavigationBar />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
@@ -22,6 +26,8 @@ const App = () => {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/login" element={<LoginPage />} />
+                    <Route path="/signup" element={<SignupPage />} />
+                    <Route path="/admin" element={<AdminLoginPage />} />
                 </Routes>
                 <Footer />
                 <ToastContainer />
