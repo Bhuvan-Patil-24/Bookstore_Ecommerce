@@ -1,34 +1,45 @@
-/* footer.css */
 .footer {
   background-color: #343a40;
-  color: white;
-  padding: 5px 0px; /* Reduced padding */
+  color: #ffffff;
 }
 
-.footer-section {
-  margin-bottom: 2px; /* Reduced margin */
+.footer-section h5 {
+  margin-bottom: 20px;
 }
 
-.footer-section h6 {
-  margin-bottom: 8px; /* Reduced margin */
-  font-size: 2rem; /* Smaller font size */
+.footer-section ul {
+  padding: 0;
 }
 
-.footer-section .list-unstyled li {
-  margin-bottom: 10px; /* Reduced margin */
+.footer-section ul li {
+  list-style: none;
+  margin-bottom: 10px;
 }
 
-.footer-section .social-icons .text-white {
-  margin-right: 10px;
-  font-size: 18px; /* Smaller icon size */
-  cursor: pointer;
+.footer-section p {
+  margin: 0;
 }
 
-.footer-center {
-  text-align: center;
+.social-icons .text-white {
+  font-size: 20px;
+  margin-right: 15px;
+  transition: color 0.3s;
 }
 
-.footer-right .btn {
-  margin-top: 0px; /* Reduced margin */
-  font-size: 0.875rem; /* Smaller font size */
+.social-icons .text-white:hover {
+  color: #007bff;
+}
+
+.footer-center h5 {
+  margin-bottom: 10px;
+}
+
+.footer-center p {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .footer-section {
+    margin-bottom: 30px;
+  }
 }

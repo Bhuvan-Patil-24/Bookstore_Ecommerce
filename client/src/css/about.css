@@ -13,6 +13,11 @@ body {
   align-items: center;
   padding: 30px;
 }
+
+.container{
+  margin: 0%;
+  padding: 700px;
+}
 .container h2 {
   font-size: 3rem; /* Adjust heading font size */
   font-weight: bold; /* Make heading bold */
@@ -23,3 +28,4 @@ body {
   font-size: 3rem; /* Adjust paragraph font size */
   line-height: 3.5; /* Adjust line height for readability */
 }
+

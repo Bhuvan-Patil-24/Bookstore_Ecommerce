@@ -5,7 +5,7 @@ import { isAuthenticated, isAdmin, isAuthorized } from "../Middlewares/authMiddl
 
 const router = express.Router();
 
-router.get('/', getAllBooks);
+router.get('/allBooks', getAllBooks);
 router.get('/bookById', getBookById);
 router.post('/addBook', isAuthenticated, isAdmin, addBook);
 router.put('/updateBook', isAuthenticated, isAdmin, updateBook);

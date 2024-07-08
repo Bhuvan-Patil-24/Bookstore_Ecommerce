@@ -1,13 +1,9 @@
-.books-page {
-    padding: 20px;
+.card {
+    height: 100%;
   }
   
-  .my-4 {
-    margin-top: 1.5rem !important;
-    margin-bottom: 1.5rem !important;
-  }
-  
-  .mb-4 {
-    margin-bottom: 1.5rem !important;
+  .card img {
+    height: 150px;
+    object-fit: cover;
   }
   

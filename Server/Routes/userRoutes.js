@@ -11,7 +11,6 @@ const router = express.Router();
 
 router.post("/signup", signup); // my users should signup here
 router.post("/login", login); // my users should login here
-router.post("/updateProfileImage", isAuthenticated, updateProfileImage); // updating Profile Image
 router.post("/resetPassword", isAuthenticated, resetPassword); // updating password
 
 export default router;

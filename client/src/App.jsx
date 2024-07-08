@@ -1,18 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/home.jsx';
-import BooksPage from './pages/book.jsx';
+import BooksPage from './pages/books.jsx';
 import ContactPage from './pages/contact.jsx';
 import LoginPage from './pages/login.jsx';
 import AboutPage from './pages/about.jsx';
 import NavigationBar from './components/navbar.jsx';
 import Header from './components/header.jsx';
 import Footer from './components/footer.jsx';
+import AdminLoginPage from './pages/adminLogin.jsx';
+import SignupPage from "./pages/signup.jsx";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Fiction from "./pages/Fiction.jsx"
 
 const App = () => {
     return (
@@ -25,7 +26,8 @@ const App = () => {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/login" element={<LoginPage />} />
-                    <Route path="/books/fiction" element={<Fiction />} />
+                    <Route path="/signup" element={<SignupPage />} />
+                    <Route path="/admin" element={<AdminLoginPage />} />
                 </Routes>
                 <Footer />
                 <ToastContainer />

@@ -15,29 +15,9 @@ const NavigationBar = () => {
             <LinkContainer to="/">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
-            <NavDropdown title="Books" id="basic-nav-dropdown">
-              <LinkContainer to="/books/fiction">
-                <NavDropdown.Item>Fiction</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/books/non-fiction">
-                <NavDropdown.Item>Non-Fiction</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/books/academics">
-                <NavDropdown.Item>Academics</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/books/sports">
-                <NavDropdown.Item>Sports</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/books/religious">
-                <NavDropdown.Item>Religious</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/books/poetry">
-                <NavDropdown.Item>Poetry</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/books/competitive-exam">
-                <NavDropdown.Item>Competitive Exams</NavDropdown.Item>
-              </LinkContainer>
-            </NavDropdown>
+            <LinkContainer to="/books">
+              <Nav.Link>Books Library</Nav.Link>
+            </LinkContainer>
             <LinkContainer to="/about">
               <Nav.Link>About</Nav.Link>
             </LinkContainer>
