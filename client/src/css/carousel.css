@@ -10,12 +10,12 @@
 }
 
 .carousel-caption p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
 }
 
 .custom-carousel .carousel-item {
-  height: 400px;
+  height: 500px;
 }
 
 .carousel-item img {

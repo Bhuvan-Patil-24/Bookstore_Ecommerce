@@ -18,36 +18,42 @@ const Footer = () => {
   return (
     <footer className="footer bg-dark text-white">
       <Container>
-        <Row className="align-items-center">
-          <Col md={6} className="footer-left">
+        <Row className="py-4">
+          <Col md={4} className="footer-section">
             <h5>Contact Us</h5>
             <ul className="list-unstyled">
               <li>
-                <FaPhone /> 7687545343
+                 7687545343
               </li>
               <li>
                 <FaEnvelope /> bookishblish@gmail.com
               </li>
             </ul>
+          </Col>
+          <Col md={4} className="footer-section">
             <h5>Terms and Policy</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#terms" className="text-white">Terms & Service</a>
+                Terms & Service
               </li>
               <li>
-                <a href="#policy" className="text-white">Privacy Policy</a>
+                Privacy Policy
               </li>
             </ul>
+          </Col>
+          <Col md={4} className="footer-section">
+            <h5>Follow Us</h5>
             <div className="social-icons">
-              <a href="#facebook" className="text-white"><FaFacebook /></a>
-              <a href="#twitter" className="text-white"><FaTwitter /></a>
-              <a href="#linkedin" className="text-white"><FaLinkedin /></a>
+              <FaFacebook className="text-white mr-2" />
+              <FaTwitter className="text-white mr-2" />
+              <FaLinkedin className="text-white" />
             </div>
           </Col>
-          <Col md={6} className="text-md-right footer-right">
-            <h5>bookishblish</h5>
+        </Row>
+        <Row className="py-4 align-items-center">
+          <Col md={12} className="footer-center text-center">
+            <h5>Bookish Bliss</h5>
             <p>&copy; {new Date().getFullYear()} Bookish Bliss. All rights reserved.</p>
-            <button onClick={sendRequest}>Send Request to Backend</button> {/* Example button to trigger backend request */}
           </Col>
         </Row>
       </Container>
@@ -56,4 +62,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

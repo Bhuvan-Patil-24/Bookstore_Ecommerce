@@ -1,31 +1,18 @@
-.navbar {
-  background-color: #343a40;
+/* navbar.css */
+
+/* Add space between the link containers */
+.navbar-nav .nav-link {
+  margin-right: 15px;
 }
 
-.navbar-brand,
-.nav-link {
-  color: #fff !important;
-}
-
-.nav-link {
-  margin-right: 10px;
-}
-
-.nav-link:hover {
-  color: #007bff !important;
-}
-
-.navbar-nav .nav-item .nav-link.active {
-  color: #007bff !important;
+/* Ensure the navbar brand and links are properly spaced and aligned */
+.navbar-brand {
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.navbar-toggler-icon {
-  color: #fff;
+/* Make sure the right side elements are aligned properly */
+.ms-auto {
+  margin-left: auto !important;
 }
-
-@media (max-width: 992px) {
-  .navbar-collapse {
-    background-color: #343a40;
-  }
-}
+s
